@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="../boostrap file/css/bootstrap.css">
+    <link rel="stylesheet" href="../boostrap file/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../boostrap file/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./bootstyle.css">
+    <!--  end of links of all the websit -->
+    <!--  fontawasome -->
+    <script src="../fonts/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+    <!-- end of fontawasome -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+    <div class="one">
+        <div class="lock">
+            <div class="fa fa-lock">
+            </div>
+        </div>
+        <input type="password" placeholder="Enter Password" required>
+        <span class="show-hide">
+            <i class="fa fa-eye"></i>
+        </span>
+    </div>
+    <script>
+        const pass_field = document.querySelector("input");
+        const show_btn = document.querySelector("i");
+        show_btn.addEventListener("click", function () {
+            if (pass_field.type === "password") {
+                pass_field.type = "text";
+                show_btn.classList.add("hide");
+            } else {
+                pass_field.type = "password";
+                show_btn.classList.remove("hide");
+            }
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .one {
+            height: 50px;
+            width: 280px;
+            display: flex;
+            position: relative;
+        }
+
+        .one .lock {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background: #48DBFB;
+            color: white;
+            line-height: 48px;
+            font-size: 20px;
+            border-radius: 3px 0 0 3px;
+            border: 1px solid #48DBFB;
+        }
+
+        .one input {
+            height: 100%;
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid #48DBFB;
+            padding-left: 60px;
+            font-size: 16px;
+            outline: none;
+            color: #37d7fb;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input:focus {
+            box-shadow: 0 0 15px #82e6fc,
+                0 0 25px #b4f0fd,
+                0 0 35px #ffffff;
+        }
+
+        input::placeholder {
+            color: #a6a6a6;
+        }
+
+        .show-hide {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .show-hide i {
+            font-size: 19px;
+            color: #48DBFB;
+            cursor: pointer;
+            display: none;
+        }
+
+        .show-hide i.hide:before {
+            content: '\f070';
+        }
+
+        input:valid~.show-hide i {
+            display: block;
+        }
+    </style>
+</body>
+
+</html>

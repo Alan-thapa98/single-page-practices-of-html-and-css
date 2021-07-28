@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>copy clipbord</title>
+    <!--******************** links of all the websit ********************-->
+    <link rel="stylesheet" href="../boostrap file/css/bootstrap.css">
+    <link rel="stylesheet" href="../boostrap file/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../boostrap file/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./bootstyle.css">
+    <link rel="stylesheet" href="./all btn.css">
+    <!--********************  end of links of all the websit ********************-->
+    <!--********************  fontawasome ********************-->
+    <script src="../boostrap file/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+    <!--******************** end of fontawasome ********************-->
+
+</head>
+
+<body>
+    <div class="paceinthecenter ">
+        <div class="copyclip" onclick="copy()"><i class="far fa-copy"></i></div>
+        <h1 class="centerh1copy">copy to clipborad</h1>
+        <form spellcheck="flase">
+            <textarea name="" id="text" class="text" rows="20" cols="104">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Deleniti maiores, libero accusamus iusto odit sequi earum.
+          Alias fuga aliquam consequuntur!
+          Lorem ipsum, dolor sit amet consectetur 
+          adipisicing elit. Quaerat architecto fugiat facere
+           ullam provident
+           voluptates cumque numquam nulla enim repellat!
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti maiores, libero accusamus iusto odit sequi earum.
+                Alias fuga aliquam consequuntur!
+                Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Quaerat architecto fugiat facere
+                ullam provident
+                voluptates cumque numquam nulla enim repellat!
+    </textarea>
+        </form>
+    </div>
+    <style>
+        body {
+            background-color: #2ec194;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .paceinthecenter {
+            background: #ffffff;
+            width: 800px;
+            margin-top: 30px;
+            padding: 30px 5px;
+            border-radius: 5px
+        }
+
+        .centerh1copy {
+            height: 50px;
+            margin-left: 50px;
+            font-size: 40px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+        }
+
+        .copyclip {
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: right;
+            background: #2ec194;
+            color: #ffffff;
+            margin-right: 50px;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        .copyclip:active {
+            background: #ffffff;
+            color: #2ec194;
+            border: 0.5px solid #2ec194;
+
+        }
+
+        .text {
+            outline: none;
+            margin-top: 30px;
+            margin-left: 28px;
+            overflow: hidden;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 1px black;
+
+        }
+    </style>
+    <script>
+        function copy() {
+            var text = document.getElementById("text");
+            text.select();
+            text.setSelectionRange(0, 9999);
+            document.execCommand("copy");
+        }
+    </script>
+
+</body>
+
+</html>

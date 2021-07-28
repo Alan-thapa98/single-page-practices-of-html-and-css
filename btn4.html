@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <!-- links of all the websit -->
+    <link rel="stylesheet" href="../boostrap file/css/bootstrap.css">
+    <link rel="stylesheet" href="../boostrap file/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../boostrap file/css/bootstrap-reboot.min.css">
+    <!--  end of links of all the websit -->
+    <!--  fontawasome -->
+    <script src="./fonts/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+    <!-- end of fontawasome -->
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Glowing CSS Buttons | CodingNepal</title> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="button">
+        <button class="one12">Hover Me</button>
+        <button class="one12">Hover Me</button>
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html,
+        body {
+            display: grid;
+            height: 100%;
+            place-items: center;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .one12 {
+            position: relative;
+            height: 60px;
+            width: 200px;
+            margin: 0 35px;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            background: #111;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.5s;
+        }
+
+        .one12:first-child:hover {
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+            background-size: 400%;
+        }
+
+        .one12:last-child:hover {
+            background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+            background-size: 400%;
+        }
+
+        .one12:first-child:before,
+        .one12:last-child:before {
+            content: '';
+            position: absolute;
+            background: inherit;
+            top: -5px;
+            right: -5px;
+            bottom: -5px;
+            left: -5px;
+            border-radius: 50px;
+            filter: blur(20px);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .one12:first-child:hover:before,
+        .one12:last-child:hover:before {
+            opacity: 1;
+            z-index: -1;
+        }
+
+        .one12:hover {
+            z-index: 1;
+            animation: glow 8s linear infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 400%;
+            }
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradint text</title>
+</head>
+
+<body>
+    <div class="centertext">
+        <div spellcheck="false" contenteditable="true" class="text">gradint</div>
+
+    </div>
+    <div class="centertext2">
+        <div class="btn">
+            <a href="#"><span>Hover Me</span></a>
+
+        </div>
+
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        /*<!-- for the textanimation -->*/
+        .centertext {
+            display: flex;
+            height: 100vh;
+            place-items: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+
+            font-size: 200px;
+            font-weight: 700;
+            text-transform: capitalize;
+            background: linear-gradient(135deg, pink 0%, red 25%, red 50%, aqua 75%, brown, blue, black);
+            background-size: 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: animate 10s linear infinite;
+        }
+
+        @keyframes animate {
+            100% {
+                background-position: 400%;
+            }
+
+        }
+
+        /*<!-- end for the textanimation -->*/
+
+
+        /*<!-- for the buttons bg animation -->*/
+        .centertext2 {
+            background: #111111;
+            display: flex;
+            height: 100vh;
+            place-items: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn a {
+            position: absolute;
+            outline: none;
+            text-decoration: none;
+            display: block;
+            height: 70px;
+            width: 200px;
+            background: linear-gradient(115deg, pink, yellow, red, green, black);
+            text-align: center;
+            border-radius: 6px;
+
+        }
+
+        .btn a span {
+            color: #f5f5f5f5;
+            height: 88%;
+            width: 96%;
+            background: red;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            line-height: 62px;
+            font-size: 25px;
+
+        }
+
+        .btn a:hover {
+            animation: animate2 0.4s linear infinite;
+        }
+
+        @keyframes animate2 {
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        /*<!-- end for the buttons bg animation -->*/
+    </style>
+</body>
+
+</html>

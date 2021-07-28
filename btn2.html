@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Button Border Animation | CodingNepal</title> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="width: 100%; height: 100vh;">
+    <!-- ************************* hover me  ******************************** -->
+    <div class="btn">
+        <a href="#"><span>Hover Me</span></a>
+    </div>
+    <!-- ************************* end of hover me  ******************************** -->
+
+    <!-- ************************* copy up seciton ******************************** -->
+
+    <section class="info">
+        <H1 style="text-align: center; color: red; text-transform: capitalize;">copy the about webage and mark it own
+        </H1>
+    </section>
+    <!-- ************************* end of copy up seciton ******************************** -->
+
+    <!-- copy area seciton  -->
+    <div class="container copy">
+        <!-- NOTE: Due to many textarea tag in the code I got error..So I wrote textarea tag..Replace this textarea tag with textarea tag -->
+        <textarea id="copyText" cols="100" rows="15">
+                    <!-- ************************* html ******************************** -->
+                     <!-- <!DOCTYPE html> 
+                     Created By CodingNepal 
+                     <html lang="en" dir="ltr">
+
+                    <head>
+                        <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                            <meta name="Description" content="Enter your description here" /> 
+                             links of all the websit 
+                            <link rel="stylesheet" href="../boostrap file/css/bootstrap.css">
+                            <link rel="stylesheet" href="../boostrap file/css/bootstrap.min.css">
+                            <link rel="stylesheet" href="../boostrap file/css/bootstrap-reboot.min.css"> 
+                              end of links of all the websit 
+                              fontawasome 
+                           <script src="./fonts/js/all.js"></script>
+                            <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet"> 
+                             end of fontawasome 
+                             Somehow I got an error, so I comment the title, just uncomment to show 
+                             <title>Glowing Button on Hover</title> 
+                             <link rel="stylesheet" href="style.css"> 
+                     </head> 
+
+                     <body> 
+                         <button>Hover Me</button>
+                                                  <style>
+                        /* @import url("https://fonts.googleapis.com/css?family=Raleway:300");
+
+                            * {
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            body {
+                                display: flex;
+                                height: 100vh;
+                                background: black;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
+                            button {
+                                position: relative;
+                                height: 60px;
+                                width: 200px;
+                                border: none;
+                                outline: none;
+                                color: white;
+                                background: #111;
+                                cursor: pointer;
+                                border-radius: 5px;
+                                font-size: 18px;
+                                font-family: 'Raleway', sans-serif;
+                            }
+
+                            button:before {
+                                position: absolute;
+                                content: '';
+                                top: -2px;
+                                left: -2px;
+                                height: calc(100% + 4px);
+                                width: calc(100% + 4px);
+                                border-radius: 5px;
+                                z-index: -1;
+                                opacity: 0;
+                                filter: blur(5px);
+                                background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+                                background-size: 400%;
+                                transition: opacity .3s ease-in-out;
+                                animation: animate 20s linear infinite;
+                            }
+
+                            button:hover:before {
+                                opacity: 1;
+                            }
+
+                            button:hover:active {
+                                background: none;
+                            }
+
+                            button:hover:active:before {
+                                filter: blur(2px);
+                            }
+
+                            @keyframes animate {
+                                0% {
+                                    background-position: 0 0;
+                                }
+
+                                50% {
+                                    background-position: 400% 0;
+                                }
+
+                                100% {
+                                    background-position: 0 0;
+                                }
+                            }*/
+                        </style>  
+                     </body> 
+
+                     </html> -->
+
+        
+<!-- ************************* end of html ******************************** -->
+        </textarea>
+
+        <div class="btn">
+            <button>copy in clipboard</button><span class="tooltip">copied!</span></div>
+        <!-- NOTE: Due to many textarea tag in the code I got error..So I wrote textarea tag..Replace this textarea tag with textarea tag -->
+        <textarea cols="60" id="pasteText" placeholder="Paste your copied content here.." rows="5"
+            style="display: none; height: 0%; width: 0%;"></textarea>
+    </div>
+    <!-- end of copy  section   -->
+
+    <!-- copy script section javascript  -->
+    <script>
+        const copyText = document.querySelector("#copyText");
+        const pasteText = document.querySelector("#pasteText");
+        const button = document.querySelector("button");
+        const tooltip = document.querySelector(".tooltip");
+        button.addEventListener('click', function () {
+            copyText.select();
+            pasteText.value = "";
+            tooltip.classList.add("show");
+            setTimeout(function () {
+                tooltip.classList.remove("show");
+            }, 700);
+            if (document.execCommand("copy")) {
+                pasteText.focus();
+            } else {
+                alert("Something went wrong!");
+            }
+        });
+    </script>
+    <!-- end of copy script section javascript  -->
+
+
+    <!-- end of copy script section css2 and css3   -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        .copy {
+            margin-top: 0px;
+            display: grid;
+            height: 100%;
+            place-items: center;
+
+        }
+
+        /*cover when ccpide */
+        ::selection {
+            color: #fff;
+            background: rgb(103, 200, 238);
+        }
+
+        textarea {
+            padding: 10px;
+            font-size: 17px;
+            resize: none;
+            text-align: justify;
+            color: #ffffff;
+            background-color: #222222;
+        }
+
+        /*border color */
+        textarea:focus {
+            outline-color: black;
+            border-color: black;
+        }
+
+        .btn {
+            margin: 5px 0 40px 0;
+        }
+
+        .btn button {
+            padding: 9px 15px;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 500;
+            background: #000200;
+            border: none;
+            color: #f2f2f2;
+            cursor: pointer;
+            letter-spacing: 1px;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        .btn .tooltip {
+            position: relative;
+            margin-left: -10px;
+            font-size: 17px;
+            font-weight: 500;
+            color: #f2f2f2;
+            z-index: -1;
+            background: red;
+            padding: 5px 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s, margin-left 0.4s;
+        }
+
+        .btn .tooltip.show {
+            margin-left: 10px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .tooltip:before {
+            content: '';
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            background: red;
+            top: 50%;
+            left: -5px;
+            z-index: -1;
+            transform: translateY(-50%) rotate(45deg);
+        }
+    </style>
+    <!-- end of copy script section css2 and css3   -->
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html,
+        body {
+            display: grid;
+            height: 100vh;
+            place-items: center;
+            background: #000;
+        }
+
+        .btn a {
+            position: relative;
+            color: #f5f5f5;
+            height: 70px;
+            width: 220px;
+            display: block;
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+            background-image: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+        }
+
+        .btn a:hover {
+            animation: rotate 0.4s linear infinite;
+        }
+
+        @keyframes rotate {
+            100% {
+                filter: hue-rotate(-360deg)
+            }
+        }
+
+        .btn a span {
+            height: 88%;
+            width: 96%;
+            background: #111;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 6px;
+            line-height: 62px;
+            font-size: 25px;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</body>
+
+</html>

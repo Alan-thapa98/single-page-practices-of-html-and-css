@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Copying Texts in Clipboard | CodingNepal</title> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- NOTE: Due to many textarea tag in the code I got error..So I wrote textarea tag..Replace this textarea tag with textarea tag -->
+        <textarea id="copyText" cols="60" rows="5">Welcome to CodingNepal. CodingNepal is a channel where you can learn
+            HTML, CSS, and Javascript tutorials along with creative CSS Animations and Effects. We provide free
+            resources to inspire design-focused frontend developers. Improve your coding skills with our free programs
+            and video tutorials.</textarea>
+        <br />
+        <div class="btn">
+            <button>copy in clipboard</button><span class="tooltip">opied!</span></div>
+        <!-- NOTE: Due to many textarea tag in the code I got error..So I wrote textarea tag..Replace this textarea tag with textarea tag -->
+        <textarea cols="60" id="pasteText" placeholder="Paste your copied content here.." rows="5"
+            style="display: none;"></textarea>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus nesciunt quibusdam sequi necessitatibus
+        doloribus labore est accusamus at consequuntur debitis ipsam harum quos delectus deserunt exercitationem
+        veritatis dicta hic repellat non alias mollitia dolore eaque, magnam esse. Dignissimos, asperiores quidem.
+        Pariatur architecto adipisci quas, ut velit autem eligendi itaque. Incidunt, qui? Dicta eligendi dolorem culpa
+        illo maxime? Architecto, accusantium. Earum odit officiis molestiae sed commodi voluptas voluptates. A velit
+        eveniet suscipit eligendi ipsum! Ab cum accusantium dignissimos eaque consequatur, laudantium voluptate iusto
+        ex? Molestias reprehenderit repellendus beatae perferendis deleniti aut assumenda odit, error omnis maxime
+        laboriosam quod laborum ea facilis?</p>
+    <script>
+        const copyText = document.querySelector("#copyText");
+        const pasteText = document.querySelector("#pasteText");
+        const button = document.querySelector("button");
+        const tooltip = document.querySelector(".tooltip");
+        button.addEventListener('click', function () {
+            copyText.select();
+            pasteText.value = "";
+            tooltip.classList.add("show");
+            setTimeout(function () {
+                tooltip.classList.remove("show");
+            }, 700);
+            if (document.execCommand("copy")) {
+                pasteText.focus();
+            } else {
+                alert("Something went wrong!");
+            }
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html,
+        body {
+            display: grid;
+            height: 100%;
+            place-items: center;
+        }
+
+        ::selection {
+            color: #fff;
+            background: #18b495;
+        }
+
+        textarea {
+            padding: 10px;
+            font-size: 17px;
+            resize: none;
+            text-align: justify;
+            color: #202020;
+        }
+
+        textarea:focus {
+            outline-color: #16a085;
+            border-color: #16a085;
+        }
+
+        .btn {
+            margin: 5px 0 40px 0;
+        }
+
+        .btn button {
+            padding: 9px 15px;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: 500;
+            background: linear-gradient(#18b495, #16a085);
+            border: none;
+            color: #f2f2f2;
+            cursor: pointer;
+            letter-spacing: 1px;
+            border-radius: 3px;
+            outline: none;
+        }
+
+        .btn .tooltip {
+            position: relative;
+            margin-left: -10px;
+            font-size: 17px;
+            font-weight: 500;
+            color: #f2f2f2;
+            z-index: -1;
+            background: linear-gradient(#18b495, #16a085);
+            padding: 5px 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s, margin-left 0.4s;
+        }
+
+        .btn .tooltip.show {
+            margin-left: 10px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .tooltip:before {
+            content: '';
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            background: linear-gradient(#18b495, #16a085);
+            top: 50%;
+            left: -5px;
+            z-index: -1;
+            transform: translateY(-50%) rotate(45deg);
+        }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Animation Ball</title>
+
+</head>
+
+<body>
+
+
+
+    <div class="loder">
+        <label for=""><span class="one"></span></label>
+        <label for=""><span class="two"></span></label>
+        <label for=""><span class="three"></span></label>
+        <label for=""><span class="four"></span></label>
+
+
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+        }
+
+        .loder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 30px;
+            width: 30px;
+
+
+        }
+
+        label {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            animation: z-index 3520ms linear infinite;
+        }
+
+        @keyframes z-index {
+            0% {
+                z-index: 100;
+            }
+
+            100% {
+                z-index: 100;
+            }
+        }
+
+        span {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            animation: animate 880ms cubic-bezier(.445, .05, .55, .95) infinite alternate;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translate(-98%, 0);
+            }
+
+            100% {
+                transform: translate(98%, 0);
+            }
+
+        }
+
+        label:nth-child(1) span {
+            background: red;
+        }
+
+        label:nth-child(2) span {
+            background: green;
+        }
+
+        label:nth-child(3) span {
+            background: yellow;
+        }
+
+        label:nth-child(4) span {
+            background: blue;
+        }
+
+        label:nth-child(1) {
+            animation-delay: 2620ms;
+            transform: rotate(45deg);
+        }
+
+        label:nth-child(2) {
+            animation-delay: 1760ms;
+            transform: rotate(135deg);
+        }
+
+        label:nth-child(3) {
+            transform: rotate(255deg);
+        }
+
+        label:nth-child(1) {
+            animation-delay: 880ms;
+            transform: rotate(315deg);
+        }
+    </style>
+
+</body>
+
+</html>

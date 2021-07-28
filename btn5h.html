@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    < <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here" />
+        <!-- links of all the websit -->
+        <link rel="stylesheet" href="../boostrap file/css/bootstrap.css">
+        <link rel="stylesheet" href="../boostrap file/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../boostrap file/css/bootstrap-reboot.min.css">
+        <!--  end of links of all the websit -->
+        <!--  fontawasome -->
+        <script src="./fonts/js/all.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+        <!-- end of fontawasome -->
+        <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+        <!-- <title>Glowing Button on Hover</title> -->
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="btn23">Hover Me</button>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Raleway:300");
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background: black;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn23 {
+            position: relative;
+            height: 60px;
+            width: 200px;
+            border: none;
+            outline: none;
+            color: white;
+            background: #111;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .btn23:before {
+            position: absolute;
+            content: '';
+            top: -2px;
+            left: -2px;
+            height: calc(100% + 4px);
+            width: calc(100% + 4px);
+            border-radius: 5px;
+            z-index: -1;
+            opacity: 0;
+            filter: blur(5px);
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            background-size: 400%;
+            transition: opacity .3s ease-in-out;
+            animation: animate 20s linear infinite;
+        }
+
+        .btn23:hover:before {
+            opacity: 1;
+        }
+
+        .btn23:hover:active {
+            background: none;
+        }
+
+        .btn23:hover:active:before {
+            filter: blur(2px);
+        }
+
+        @keyframes animate {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 400% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</body>
+
+</html>
